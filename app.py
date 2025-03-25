@@ -40,7 +40,7 @@ def chat():
         session['chat_history'].append({"role": "user", "content": user_message})
 
         if "suicide" in user_message.lower() or "harm myself" in user_message.lower():
-            urgent_response = "Please call 911 or a local mental health hotline immediately."
+            urgent_response = "Please call 122 or a local mental health hotline immediately."
             session['chat_history'].append({"role": "assistant", "content": urgent_response})
             return jsonify({'response': urgent_response})
         
